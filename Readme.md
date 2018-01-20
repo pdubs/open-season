@@ -13,17 +13,18 @@ app.js - Node server:
 1) Pulls Segment and Leaderboard data from the strava API, and then populates the mysql database `strava` with two tables (Segments and Efforts).
 
 2) Hosts server at localhost:3000 with the API endpoints:
-	"/" - default endpoint renders public/index.html
-	"/segments" - getSegments endpoint provides all Segments records
-	"/efforts/:id" - getEffortsBySegmentStravaId endpoint provides all efforts by strava segment ID
+
+```
+"/" - default endpoint renders public/index.html
+"/segments" - getSegments endpoint provides all Segments records
+"/efforts/:id" - getEffortsBySegmentStravaId endpoint provides all efforts by strava segment ID
+```
 
 public/script.js - AngularJS app:
 
 1) Pulls Segments and Efforts per segment from API
 2) Prepares Segments and Efforts $scope data for data table
 3) Processes efforts per segment into efforts per month data for highcharts bar chart
-
-public/index.html - Default 
 
 ---
 
