@@ -1,0 +1,47 @@
+<html ng-app="strava-app">
+<head>
+  <title>Open Season</title>
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/britecharts/dist/css/britecharts.min.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script src="https://code.angularjs.org/1.0.7/angular.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="script.js"></script>
+
+</head>
+<body ng-controller="StravaAppController">
+
+	<div id="segment-display">
+
+		<h3>Best Descents</h3>
+		<table id="segment-table">
+			<tr class="header-row">
+				<th>Link</th>
+				<th>Name</th>
+				<th>City, State</th>
+				<th>Distance</th>
+				<th>Vertical Drop</th>
+				<th>Avg. Grade</th>
+				<th>Attempts</th>
+			</tr>
+			<tr class="data-row" ng-repeat="segment in segments">
+				<td><a ng-href="https://www.strava.com/segments/{{ segment.strava_id }}" target="_blank">🔗</a></td>
+				<td>{{ segment.name }}</td>
+				<td>{{ segment.city }}, {{ segment.state }}</td>
+				<td>{{ segment.distance / 1609.34 | number:2 }} mi</td>
+				<td>{{ ( segment.elevation_high - segment.elevation_low ) * 3.28084 | number:0 }} ft</td>
+				<td>{{ segment.average_grade }}%</td>
+				<td>{{ segment.athlete_count }}</td>
+			</tr>
+		</table>
+	
+		<div id="container" style="min-width: 310px; height: 400px; margin: 20px auto"></div>
+
+
+	</div>
+
+</body>
+</html>
