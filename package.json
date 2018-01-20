@@ -1,5 +1,6 @@
 {
   "name": "open-season",
+  "repository": "open-season",
   "version": "0.0.1",
   "description": "",
   "main": "app.js",

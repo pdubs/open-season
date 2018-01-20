@@ -48,7 +48,11 @@ This app was ultimately inspired by the days spent outrunning freak high country
 6. `knex migrate:latest`
 7. `node app.js`
 
-To drop each table and start fresh, you'll need to:
+The app should now be running at http://localhost:3000/
+
+In `app.js`, if `updateDb` is set to `true`, the database will be updated before the API server runs.
+
+In these instances, before restarting the server with `node app.js`, you'll need to first reload the database with two commands:
 `knex migrate:rollback`
 `knex migrate:latest`
 
