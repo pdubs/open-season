@@ -1,6 +1,6 @@
 # Open Season
 
-## A strava segment analysis tool to determine the average (and peak) "season" for the greatest* high country mountain biking descents.
+#### A strava segment analysis tool to determine the average (and peak) "season" for the greatest* high country mountain biking descents.
 
 ---
 
