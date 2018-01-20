@@ -1,10 +1,10 @@
-Open Season
+# Open Season
 
-A strava segment analysis tool to determine the average (and peak) "season" for the greatest* high country mountain biking descents.
+## A strava segment analysis tool to determine the average (and peak) "season" for the greatest* high country mountain biking descents.
 
 ---
 
-Structure
+### Structure
 
 sample_knex_migration.js - sample knex mysql migration
 
@@ -27,29 +27,31 @@ public/index.html - Default
 
 ---
 
-Motivation
+### Motivation
 
-Strava's existence may be spurring an increase in reckless riding, but it also provides a large pool of open data.  A good idea to istoric segment/leaderboard data could be used to determine when the best time to travel to specific destinations is on average, by factoring in the normal "open season".
+I've often wondered if looking at historic Strava segment data could help determine the best time to travel to specific destinations - because places like Moab, Crested Butte, and Teton Pass are not easily accessed!
 
-Inspired by the days spent outrunning freak high country snow storms on epic descents.
+For segments that get enough traffic, we could even look at the fastest times ever to determine a minimum elapsed "competitive" time (which could help indicate when a trail is dry enough to ride in the Spring).
+
+This app was ultimately inspired by the days spent outrunning freak high country snow storms.
 
 ---
 
-Installation
+### Installation
 
-Install mysql (14.14+ for osx), node (7.3.0+) & npm(5.6.0+).
-`npm install`
-`knex migrate:make segments_efforts`
-Open `migrations/XXXX_segments_efforts.js` and `sample_knex_migration.js` in a text editor
-Copy contents of `sample_knex_migration.js` into `migrations/XXXX_segments_efforts.js`, Save
-`knex migrate:latest`
-`node app.js`
+1. Install *mysql* (14.14+ for osx), *node* (7.3.0+) & *npm* (5.6.0+).
+2. `npm install`
+3. `knex migrate:make segments_efforts`
+4. Open `migrations/XXXX_segments_efforts.js` and `sample_knex_migration.js` in a text editor
+5. Copy contents of `sample_knex_migration.js` into `migrations/XXXX_segments_efforts.js`, Save
+6. `knex migrate:latest`
+7. `node app.js`
 
 To drop each table and start fresh, you'll need to:
 `knex migrate:rollback`
 `knex migrate:latest`
 
-
+---
 
 *I may be biased
 
