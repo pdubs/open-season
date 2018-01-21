@@ -28,11 +28,11 @@ var segments = {
   // warren_gulch: '1535164',
   // pikes_peak: '4665001',
   // wheeler_pass: '13114973',
-  greens_creek: '1658714',
+  // greens_creek: '1658714',
+  // kennebec: '2019489',
+  // two_elks: '8199567',
   burro: '1218626',
-  kennebec: '2019489',
   dr_park: '2474266',
-  two_elks: '8199567',
   lithium: '7648857'
 }
 
